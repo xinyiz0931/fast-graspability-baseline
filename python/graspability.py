@@ -112,8 +112,6 @@ class Graspability(object):
             for r_idx, r in enumerate(np.arange(0, 180, self.rotation_step)):
                 Hc = hc_rot[r_idx]
                 Ht = ht_rot[r_idx]
-                print("! Hc size: ", Hc.shape)
-                print("! Wc size: ", Wc.shape)
                 C = cv2.filter2D(Wc, -1, Hc) #Hc
                 T = cv2.filter2D(Wt, -1, Ht) #Ht
                 
