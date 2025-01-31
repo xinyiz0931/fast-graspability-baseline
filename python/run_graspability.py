@@ -39,7 +39,7 @@ def main():
     grasps = method.grasp_planning(img, n_grasp)
     
     print(f"Success! {len(grasps)} grasps detected! ")
-    for i in range(n_grasp):
+    for i in range(len(grasps)):
         print("Grasp #%d: (%d, %d, %.1f)" % (i, *grasps[i]))
     ret = method.draw_grasp(grasps, img, top_only=False)
 
